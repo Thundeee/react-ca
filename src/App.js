@@ -5,14 +5,11 @@ import Product from './pages/Product';
 import Contact from './pages/Contact';
 import Checkout from './pages/Checkout';
 import CheckoutSuccess from './pages/CheckoutSuccess';
-import { useContext } from 'react';
-import { ItemContext } from './context/itemGetter';
 
 
  function App() {
 
-  const { items, isLoading, isError } = useContext(ItemContext);
-  console.log(items);
+
 
 
   return (
