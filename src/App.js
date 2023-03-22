@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Product from './pages/Product';
+import Contact from './pages/Contact';
+import Checkout from './pages/Checkout';
+import CheckoutSuccess from './pages/CheckoutSuccess';
 
-function App() {
+
+async function App() {
+  const dispatch = useDispatch();
+  dispatch({ type: 'tems/ItemStuff' });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Layout>
+      
+          <Routes>
+      
+    <Route index element={<Home/>} />
+      <Route path='/contact' element={<Contact/>} />
+      <Route path='/checkout' element={<Checkout/> } />
+      <Route path='/checkoutSuccess' element={<CheckoutSuccess/>} />    
+      <Route path='/product/:id' element={<Product/>} />
+      <Route path="*" element={<div>Route not found</div>} />
+    </Routes>
+
+    </Layout>
+
+  </>
   );
 }
 
