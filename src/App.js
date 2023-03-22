@@ -1,22 +1,24 @@
 import { Routes, Route } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Product from './pages/Product';
 import Contact from './pages/Contact';
 import Checkout from './pages/Checkout';
 import CheckoutSuccess from './pages/CheckoutSuccess';
+import { useContext } from 'react';
+import { ItemContext } from './context/itemGetter';
 
 
-async function App() {
-  const dispatch = useDispatch();
-  dispatch({ type: 'tems/ItemStuff' });
+ function App() {
+
+  const { items, isLoading, isError } = useContext(ItemContext);
+  console.log(items);
+
+
   return (
     <>
     <Layout>
-      
           <Routes>
-      
     <Route index element={<Home/>} />
       <Route path='/contact' element={<Contact/>} />
       <Route path='/checkout' element={<Checkout/> } />
@@ -26,7 +28,6 @@ async function App() {
     </Routes>
 
     </Layout>
-
   </>
   );
 }
