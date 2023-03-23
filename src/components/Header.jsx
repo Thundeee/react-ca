@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import useSearch from '../hooks/useSearch';
+import { useContext } from 'react';
+import { ItemContext } from '../context/itemGetter';
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -8,12 +10,26 @@ const Header = () => {
 
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
+
+
   };  
+  const { items, isLoading, isError } = useContext(ItemContext);
+
 
   return (
     <header>
       <div className='search'>
         <input type='text' placeholder='Search...' value={searchQuery} onChange={handleSearchInputChange} />
+        
+        <ul className='searchList'>
+        {isLoading && <div>Loading...</div>}
+        {isError && <div>Error...</div>}
+          {searchItems.map((item) => (
+            <li key={item.id}>
+              <Link to={`/product/${item.id}`}>{item.title}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
 
         <nav>
