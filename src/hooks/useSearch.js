@@ -16,6 +16,10 @@ const useSearch = (query) => {
     });
   };
 
+  if (searchItems().length === 0) {
+    console.log("No items found")
+       return [[ {title: "No results found", id: "../"} ]]; 
+  }
   console.log("searchItems: ", searchItems());
   return [searchItems()];
 };
