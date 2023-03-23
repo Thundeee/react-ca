@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { ItemContext } from '../context/itemGetter';
+import { Link } from 'react-router-dom';
 
 
  const Home =  () => {
@@ -18,6 +19,8 @@ import { ItemContext } from '../context/itemGetter';
             <h3>{item.title}</h3>
             <p>{item.description}</p>
             <p>{item.price}</p>
+            <button><Link to={`/product/${item.id}`}>View Product</Link></button>
+
           </div>)
         
         }

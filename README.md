@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - 6.4 CheckoutSuccessPage
 7. Add React Router and route to each of the pages. The ProductPage page will be using a dynamic segment. :heavy_check_mark:
 8. Fetch the list of products on the Homepage and store this as a state. :heavy_check_mark:
-9. On the homepage, loop through the products and display a Product component for each of the values. This Product component should look like a product card. Each Product component will have a View product button which will link to the ProductPage page. :ballot_box_with_check:
+9. On the homepage, loop through the products and display a Product component for each of the values. This Product component should look like a product card. Each Product component will have a View product button which will link to the ProductPage page. :heavy_check_mark:
 10. The homepage should have a lookahead/auto-complete Search bar component. Typing values in the search bar should display products where the title matches the search input. Clicking on an item should take the user to the ProductPage page. Tip: Filter the user input and then display products that match the input. :heavy_check_mark:
 11. On the ProductPage, use the ID of the product as the params for the dynamic segment. Add the product details as mentioned in the brief. :heavy_check_mark:
 12. Create a cart state. When the Add to cart button on the ProductPage is clicked, add the product to the cart. :x:
