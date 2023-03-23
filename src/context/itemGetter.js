@@ -1,11 +1,12 @@
 import React, { createContext } from 'react';
 import useApi from '../hooks/useApi';
+import { BASE_URL } from '../utils/constant';
 
 const ItemContext = createContext();
 
 export const ItemProvider = ({ children }) => {
     const { data: items, isLoading, isError } = useApi(
-        'https://api.noroff.dev/api/v1/online-shop'
+        BASE_URL
     );
 
     for (let i = 0; i < items.length; i++) {
