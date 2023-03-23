@@ -13,7 +13,7 @@ const Header = () => {
 
 
   };  
-  const { items, isLoading, isError } = useContext(ItemContext);
+  const { isLoading, isError } = useContext(ItemContext);
 
 
   return (

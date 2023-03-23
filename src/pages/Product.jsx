@@ -1,5 +1,4 @@
 import { useParams } from 'react-router-dom';
-import useApi from '../hooks/useApi';
 import { useContext } from 'react';
 import { ItemContext } from '../context/itemGetter';
 
