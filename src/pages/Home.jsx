@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom';
           <div key={item.id}>
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-            <p>Kr {item.price}</p>
+            <p>Kr {item.price},-</p>
             <button><Link to={`/product/${item.id}`}>View Product</Link></button>
 
           </div>)

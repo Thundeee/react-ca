@@ -44,7 +44,7 @@ const Product = () => {
         {isError && <div>Error...</div>}
         <h3>{CorrectItem?.title}</h3>
         <p>{CorrectItem?.description}</p>
-        <p>Kr {CorrectItem?.price}</p>
+        <p>Kr {CorrectItem?.price},-</p>
         <img src={CorrectItem?.imageUrl} alt={CorrectItem?.title} />
         <p>{CorrectItem?.rating}</p>
         <button id='addCart' onClick={handleAddToCart} value={CorrectItem?.id}>Add to cart</button>
