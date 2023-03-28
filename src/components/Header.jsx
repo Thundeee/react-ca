@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useSearch from '../hooks/useSearch';
 import { useContext } from 'react';
 import { ItemContext } from '../context/itemGetter';
+import { Badge, IconButton } from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useSessionStorage } from '../hooks/useSessionStorage';
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -15,7 +18,8 @@ const Header = () => {
   };  
   const { isLoading, isError } = useContext(ItemContext);
 
-
+  const cart = useSessionStorage('cart');
+console.log(cart);
   return (
     <header>
       <div className='search'>
@@ -41,7 +45,13 @@ const Header = () => {
             <Link to='/contact'>Contact</Link>
           </li>
           <li>
-            <Link to='/checkout'>Checkout</Link>
+          <Badge badgeContent={cart.length} color="secondary">
+      <IconButton>
+      <Link to='/checkout'>
+        <ShoppingCartIcon fontSize='large' />
+        </Link>
+      </IconButton>
+    </Badge>
           </li>
         </ul>
   
