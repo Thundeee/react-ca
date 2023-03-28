@@ -21,9 +21,6 @@ export const ItemProvider = ({ children }) => {
 
             
         }   
-        console.log(items[i].price);
-        items[i].price = new Intl.NumberFormat('nb-Nb', { style: 'currency', currency: 'nok' }).format(items[i].price)
-        console.log(items[i].price);
     }
 
     return (

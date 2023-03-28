@@ -11,8 +11,12 @@ const useApi = (url) => {
         setIsLoading(true);
         setIsError(false);
         const fetchedData = await fetch(url);
+        if (!fetchedData.ok) {
+            throw new Error(fetchedData.status);
+          }
         const json = await fetchedData.json();
         setData(json);
+
       } catch (error) {
         console.log(error);
         setIsError(true);

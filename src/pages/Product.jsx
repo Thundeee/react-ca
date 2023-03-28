@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useContext } from 'react';
 import { ItemContext } from '../context/itemGetter';
+import { useSessionStorage } from '../hooks/useSessionStorage';
 
 const Product = () => {
   const { id, } = useParams();
@@ -13,6 +14,28 @@ const Product = () => {
   console.log(CorrectItem);
 
 
+  const [cart, setCart] = useSessionStorage('cart', []);
+
+  const handleAddToCart = (event) => {
+    const id = event.target.value;
+  
+    if (cart.find((item) => item.id === id)) {
+      const updatedCart = cart.map((item) => {
+        if (item.id === id) {
+          return { ...item, amount: item.amount + 1 };
+        }
+        return item;
+      });
+      setCart(updatedCart);
+      return;
+    }
+  
+    const item = items.find((item) => item.id === id);
+    item.amount = 1;
+    setCart([...cart, item]);
+  };
+
+
   return (
     <div>
         <h1>Product page</h1>
@@ -21,9 +44,10 @@ const Product = () => {
         {isError && <div>Error...</div>}
         <h3>{CorrectItem?.title}</h3>
         <p>{CorrectItem?.description}</p>
-        <p>{CorrectItem?.price}</p>
+        <p>Kr {CorrectItem?.price}</p>
         <img src={CorrectItem?.imageUrl} alt={CorrectItem?.title} />
         <p>{CorrectItem?.rating}</p>
+        <button id='addCart' onClick={handleAddToCart} value={CorrectItem?.id}>Add to cart</button>
         <ul>
           {CorrectItem?.reviews.map((review) => (
             <li key={review.id}>

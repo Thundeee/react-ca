@@ -24,7 +24,7 @@ const Header = () => {
         <ul className='searchList'>
         {isLoading && <div>Loading...</div>}
         {isError && <div>Error...</div>}
-          {searchItems.map((item) => (
+          {searchItems && searchItems.map((item) => (
             <li key={item.id}>
               <Link to={`/product/${item.id}`}>{item.title}</Link>
             </li>

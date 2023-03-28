@@ -18,10 +18,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 9. On the homepage, loop through the products and display a Product component for each of the values. This Product component should look like a product card. Each Product component will have a View product button which will link to the ProductPage page. :heavy_check_mark:
 10. The homepage should have a lookahead/auto-complete Search bar component. Typing values in the search bar should display products where the title matches the search input. Clicking on an item should take the user to the ProductPage page. Tip: Filter the user input and then display products that match the input. :heavy_check_mark:
 11. On the ProductPage, use the ID of the product as the params for the dynamic segment. Add the product details as mentioned in the brief. :heavy_check_mark:
-12. Create a cart state. When the Add to cart button on the ProductPage is clicked, add the product to the cart. :x:
+12. Create a cart state. When the Add to cart button on the ProductPage is clicked, add the product to the cart. :heavy_check_mark:
 13. Clicking on the Cart Icon component will take the user to the CheckoutPage page. :x:
-14. The CheckoutPage must list all of the products in the cart, show a total at the bottom and a Checkout button. :x:
-15. Clicking the Checkout button will take the user to the CheckoutSuccessPage. :x:
+14. The CheckoutPage must list all of the products in the cart, show a total at the bottom and a Checkout button. :heavy_check_mark:
+15. Clicking the Checkout button will take the user to the CheckoutSuccessPage. :heavy_check_mark:
 16. The CheckoutSuccessPage should display that the order was successful and clear the cart. There should be a link to go back to the store. :x:
 17. On the ContactPage, create the following inputs with the following requirements. :heavy_check_mark:
 - 17.1 Full name (Minimum number of characters is 3, required)
