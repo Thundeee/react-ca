@@ -3,10 +3,9 @@ import { useState } from 'react';
 import useSearch from '../hooks/useSearch';
 import { useContext } from 'react';
 import { ItemContext } from '../context/itemGetter';
+import { useSelector } from 'react-redux';
 import { Badge, IconButton } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { useSessionStorage } from '../hooks/useSessionStorage';
-import { useSelector, useDispatch } from 'react-redux';
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -19,9 +18,6 @@ const Header = () => {
   };  
   const { isLoading, isError } = useContext(ItemContext);
   
-
-  const [cart, useCart] = useSessionStorage('cart', []);
-
   const count = useSelector((state) => state.cartHandling.quantity);
   console.log(count);
 
