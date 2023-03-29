@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import useSearch from '../hooks/useSearch';
 import { useContext } from 'react';
 import { ItemContext } from '../context/itemGetter';
@@ -17,9 +17,11 @@ const Header = () => {
 
   };  
   const { isLoading, isError } = useContext(ItemContext);
+  
 
-  const cart = useSessionStorage('cart');
-console.log(cart);
+  const [cart, useCart] = useSessionStorage('cart', []);
+
+let cartLength = cart ? cart.length : 0;
   return (
     <header>
       <div className='search'>
@@ -45,7 +47,7 @@ console.log(cart);
             <Link to='/contact'>Contact</Link>
           </li>
           <li>
-          <Badge badgeContent={cart.length} color="secondary">
+          <Badge badgeContent={cartLength} color="secondary">
       <IconButton>
       <Link to='/checkout'>
         <ShoppingCartIcon fontSize='large' />

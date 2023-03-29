@@ -8,11 +8,9 @@ const Checkout = () => {
   const remover = (event) => {
     const id = event.target.value;
 let products = JSON.parse(sessionStorage.getItem('cart'));
-// Find the index of the item with ID 1234 in the cart
 const index = products.find((item) => item.id === id);
 console.log(index);
 if (index.amount > 1) {
-
   index.amount --;
   sessionStorage.setItem('cart', JSON.stringify(products));
 } else {

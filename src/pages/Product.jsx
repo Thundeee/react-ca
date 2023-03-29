@@ -5,13 +5,10 @@ import { useSessionStorage } from '../hooks/useSessionStorage';
 
 const Product = () => {
   const { id, } = useParams();
-  console.log(id);
 
   const { items, isLoading, isError } = useContext(ItemContext);
-  console.log(items);
 
    const  CorrectItem =  items.find((item) => item.id === id);
-  console.log(CorrectItem);
 
 
   const [cart, setCart] = useSessionStorage('cart', []);
@@ -28,11 +25,12 @@ const Product = () => {
       });
       setCart(updatedCart);
       return;
-    }
+    } 
   
     const item = items.find((item) => item.id === id);
     item.amount = 1;
     setCart([...cart, item]);
+    
   };
 
 
@@ -45,7 +43,7 @@ const Product = () => {
         <h3>{CorrectItem?.title}</h3>
         <p>{CorrectItem?.description}</p>
         <p>Kr {CorrectItem?.price},-</p>
-        <img src={CorrectItem?.imageUrl} alt={CorrectItem?.title} />
+        <img src={CorrectItem?.imageUrl} width="150" alt={CorrectItem?.title} />
         <p>{CorrectItem?.rating}</p>
         <button id='addCart' onClick={handleAddToCart} value={CorrectItem?.id}>Add to cart</button>
         <ul>
