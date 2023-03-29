@@ -1,6 +1,10 @@
 import { useSessionStorage } from '../hooks/useSessionStorage';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { removeItem } from '../store/cartSlice/cart';
 const Checkout = () => {
+
+  const dispatch = useDispatch();
 
   const [cart, setCart] = useSessionStorage('cart', []);
   console.log(cart);
@@ -21,6 +25,7 @@ if (index.amount > 1) {
 }
 
 setCart(products);
+dispatch(removeItem());
   };
 
 

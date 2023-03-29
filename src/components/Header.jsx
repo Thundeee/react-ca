@@ -6,6 +6,7 @@ import { ItemContext } from '../context/itemGetter';
 import { Badge, IconButton } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useSessionStorage } from '../hooks/useSessionStorage';
+import { useSelector, useDispatch } from 'react-redux';
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -21,7 +22,10 @@ const Header = () => {
 
   const [cart, useCart] = useSessionStorage('cart', []);
 
-let cartLength = cart ? cart.length : 0;
+  const count = useSelector((state) => state.cartHandling.quantity);
+  console.log(count);
+
+let cartLength = count ? count : 0;
   return (
     <header>
       <div className='search'>

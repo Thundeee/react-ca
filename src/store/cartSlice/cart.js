@@ -1,8 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 
+const cartItems = JSON.parse(window.sessionStorage.getItem('cart'));
+const initialQuantity = cartItems.reduce((total, item) => total + item.amount, 0);
+
 const initialState = {
-    items: [window.sessionStorage.getItem('cart')],
+    quantity: initialQuantity
 };
 
 export const cartSlice = createSlice({
@@ -12,17 +15,25 @@ export const cartSlice = createSlice({
   initialState,
   // These are the actions that will be made available
   reducers: {
-    updateItems: (state, action) => {
-        state.items = window.sessionStorage.getItem('cart')
+    addItem: (state, action) => {
+        // Add +1 to the quantity of the item
+        state.quantity += 1;
+    },
+    removeItem: (state, action) => {
+        // Remove -1 from the quantity of the item
+        state.quantity -= 1;
+    },
+    
         
         
 
       //
 
-    },
+    
   },
 });
 
-export const { updateItems } = cartSlice.actions;
+
+export const { addItem, removeItem } = cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -2,8 +2,13 @@ import { useParams } from 'react-router-dom';
 import { useContext } from 'react';
 import { ItemContext } from '../context/itemGetter';
 import { useSessionStorage } from '../hooks/useSessionStorage';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../store/cartSlice/cart';
 
 const Product = () => {
+
+  const dispatch = useDispatch();
+
   const { id, } = useParams();
 
   const { items, isLoading, isError } = useContext(ItemContext);
@@ -24,13 +29,14 @@ const Product = () => {
         return item;
       });
       setCart(updatedCart);
+      dispatch(addItem());
       return;
     } 
   
     const item = items.find((item) => item.id === id);
     item.amount = 1;
     setCart([...cart, item]);
-    
+    dispatch(addItem());
   };
 
 
