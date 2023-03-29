@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 
 const cartItems = JSON.parse(window.sessionStorage.getItem('cart'));
-const initialQuantity = cartItems.reduce((total, item) => total + item.amount, 0);
+const initialQuantity = cartItems ? cartItems.reduce((total, item) => total + item.amount, 0) : 0;
 
 const initialState = {
     quantity: initialQuantity
@@ -23,6 +23,12 @@ export const cartSlice = createSlice({
         // Remove -1 from the quantity of the item
         state.quantity -= 1;
     },
+
+    clearItems: (state, action) => {
+        // Remove all items from the cart
+        state.quantity = 0;
+
+    },
     
         
         
@@ -34,6 +40,6 @@ export const cartSlice = createSlice({
 });
 
 
-export const { addItem, removeItem } = cartSlice.actions;
+export const { addItem, removeItem, clearItems } = cartSlice.actions;
 
 export default cartSlice.reducer;

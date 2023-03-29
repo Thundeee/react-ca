@@ -1,7 +1,7 @@
 import { useSessionStorage } from '../hooks/useSessionStorage';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { removeItem } from '../store/cartSlice/cart';
+import { removeItem, clearItems } from '../store/cartSlice/cart';
 const Checkout = () => {
 
   const dispatch = useDispatch();
@@ -26,9 +26,16 @@ if (index.amount > 1) {
 
 setCart(products);
 dispatch(removeItem());
-  };
 
+  }
 
+  const exiter = () => {
+    sessionStorage.removeItem('cart');
+    setCart([]);
+    dispatch(clearItems())
+    };
+  
+  
     return (
       <div>
           <h1>Checkout page</h1>
@@ -52,9 +59,9 @@ dispatch(removeItem());
               }
 
           </ul>
-          <button><Link to={`/CheckoutSuccess`}>Checkout!</Link></button>
+          <button onClick={exiter}><Link to={`/CheckoutSuccess`}>Checkout!</Link></button>
       </div>
     );
   };
-  
+
   export default Checkout;
