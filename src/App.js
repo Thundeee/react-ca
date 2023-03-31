@@ -5,15 +5,13 @@ import Product from './pages/Product';
 import Contact from './pages/Contact';
 import Checkout from './pages/Checkout';
 import CheckoutSuccess from './pages/CheckoutSuccess';
-
+import theme from './theme/theme';
+import { ThemeProvider } from "@mui/system";
 
  function App() {
 
-
-
-
   return (
-    <>
+    <ThemeProvider theme={theme}>
     <Layout>
           <Routes>
     <Route index element={<Home/>} />
@@ -21,11 +19,11 @@ import CheckoutSuccess from './pages/CheckoutSuccess';
       <Route path='/checkout' element={<Checkout/> } />
       <Route path='/checkoutSuccess' element={<CheckoutSuccess/>} />    
       <Route path='/product/:id' element={<Product/>} />
-      <Route path="*" element={<div>Route not found</div>} />
+      <Route path="*" element={<div>404 Error page not found</div>} />
     </Routes>
 
     </Layout>
-  </>
+  </ThemeProvider>
   );
 }
 

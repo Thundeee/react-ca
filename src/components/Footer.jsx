@@ -1,13 +1,13 @@
-
+import { Typography } from "@mui/material";
 
 const Footer = () => {
+  return (
+    <footer>
+      <Typography variant="h6" align="center" gutterBottom>
+    @ {new Date().getFullYear()} - QuickShop
+      </Typography>
+    </footer>
+  );
+};
 
-
-    return (
-<footer>
-        <h1>Footer</h1>
-</footer>    
-);
-  };
-  
-  export default Footer;
+export default Footer;

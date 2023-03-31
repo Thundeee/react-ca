@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
   return (
     <div>
-        <h1>Home pae</h1>
+        <h1>Catalogue</h1>
         
         {isLoading && <div>Loading...</div>}
         {isError && <div>Error...</div>}
