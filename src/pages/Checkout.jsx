@@ -57,6 +57,7 @@ dispatch(removeItem());
               <h3>Total price: Kr {cart.reduce((total, item) => total + item.price * item.amount, 0).toFixed(2)}</h3>
 
               }
+              <button onClick={exiter}>Clear cart</button>
 
           </ul>
           <button onClick={exiter}><Link to={`/CheckoutSuccess`}>Checkout!</Link></button>
