@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { contactSchema } from '../utils/yupSchema';
+import { FormField } from '../components/FormField';
 
 
 const Contact = () => {
@@ -22,18 +23,34 @@ const Contact = () => {
         <h1>Contact page</h1>
         <form id='contactForm' onSubmit={handleSubmit(onSubmit)}>
         
-       <h4>Full Name</h4> 
-      <input {...register('fullName')} />
-      <p>{errors.fullName?.message}</p>
-        <h4>Subject</h4>
-      <input {...register('subject')} />
-      <p>{errors.subject?.message}</p>
-      <h4>Email</h4>
-      <input {...register('email')} />
-      <p>{errors.email?.message}</p>
-        <h4>Body</h4>
-      <input {...register('body')} />
-      <p>{errors.body?.message}</p>
+        <FormField 
+            name="fullName"
+            label="Full Name"
+            register={register}
+            errors={errors}
+          />
+
+          <FormField 
+            name="subject"
+            label="Subject"
+            register={register}
+            errors={errors}
+          />
+
+          <FormField 
+            name="email"
+            label="Email"
+            register={register}
+            errors={errors}
+          />
+
+          <FormField 
+            name="body"
+            label="Body"
+            register={register}
+            errors={errors}
+            inputProps={{type: 'textarea'}}
+          />
       <input type="submit" />
     </form>
     </div>
