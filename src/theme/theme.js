@@ -1,6 +1,5 @@
 import { createTheme } from "@mui/material";
 import { purple } from "@mui/material/colors";
-import styled from "styled-components";
 
 const theme = createTheme({
   palette: {
@@ -17,10 +16,6 @@ const theme = createTheme({
 
 });
 
-const DefaultComponent = styled.main`
-min-height: 90vh;
-padding: 0 10px;
-margin: 10px auto;
-`;
 
-export {theme, DefaultComponent};
+
+export {theme};

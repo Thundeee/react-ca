@@ -5,7 +5,7 @@ import Product from './pages/Product';
 import Contact from './pages/Contact';
 import Checkout from './pages/Checkout';
 import CheckoutSuccess from './pages/CheckoutSuccess';
-import {theme, DefaultComponent} from './theme/theme';
+import {theme} from './theme/theme';
 import { ThemeProvider } from "@mui/material";
 import './index.css'
 

@@ -5,7 +5,10 @@ export const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  text-align: center;
+
 
   h1 {
     margin: 0;
@@ -37,13 +40,24 @@ export const HeaderWrapper = styled.header`
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+     ul {
+      padding: 0;
+    }
+  }
 `;
 
 export const SearchWrapper = styled.div`
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
 `;
 
 export const SearchInput = styled.input`
@@ -64,11 +78,13 @@ export const SearchList = styled.ul`
   background-color: white;
   border: 1px solid grey;
   border-radius: 5px;
+  z-index: 1;
 `;
 
 export const SearchListItem = styled.li`
   padding: 0.5rem;
   border-bottom: 1px solid grey;
+
 
   &:last-child {
     border-bottom: none;

@@ -25,7 +25,7 @@ const Home = () => {
                 sx={{
                     display: "flex",
                     flexWrap: "wrap",
-                    justifyContent: "space-between",
+                    justifyContent: "space-evenly",
                     margin: "30px 10%",
                 }}
             >
@@ -35,8 +35,9 @@ const Home = () => {
                             key={item.id}
                             sx={{
                                 position: "relative",
-                                flexBasis: "30%",
-                                marginBottom: "30px",
+                                margin: "1px",
+                                marginBottom: "20px",
+                                width: "300px",
                             }}
                         >
                             {item.discount !== false && (
@@ -56,7 +57,7 @@ const Home = () => {
                             )}
                             <CardMedia
                                 component="img"
-                                height="250"
+                                height="200"
                                 image={item.imageUrl}
                                 alt={item.title}
                             />
