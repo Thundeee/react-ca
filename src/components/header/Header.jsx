@@ -40,7 +40,7 @@ const Header = () => {
   };
 
   return (
-    <HeaderWrapper>
+    <HeaderWrapper theme={theme}>
       <Link to={'/'}> <h1>QuickShop</h1></Link>
 
       <SearchWrapper>

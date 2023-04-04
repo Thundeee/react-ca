@@ -1,9 +1,11 @@
 import { createTheme } from "@mui/material";
+import { purple } from "@mui/material/colors";
+import styled from "styled-components";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#0088cc',
+      main:  purple[500],
     },
     secondary: {
       main: '#ffcc00',
@@ -15,4 +17,10 @@ const theme = createTheme({
 
 });
 
-export default theme;
+const DefaultComponent = styled.main`
+min-height: 90vh;
+padding: 0 10px;
+margin: 10px auto;
+`;
+
+export {theme, DefaultComponent};

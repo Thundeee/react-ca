@@ -5,14 +5,16 @@ import Product from './pages/Product';
 import Contact from './pages/Contact';
 import Checkout from './pages/Checkout';
 import CheckoutSuccess from './pages/CheckoutSuccess';
-import theme from './theme/theme';
-import { ThemeProvider } from "@mui/system";
+import {theme, DefaultComponent} from './theme/theme';
+import { ThemeProvider } from "@mui/material";
+import './index.css'
 
  function App() {
 
   return (
     <ThemeProvider theme={theme}>
     <Layout>
+
           <Routes>
     <Route index element={<Home/>} />
       <Route path='/contact' element={<Contact/>} />

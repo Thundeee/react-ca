@@ -12,14 +12,11 @@ export const ItemProvider = ({ children }) => {
     for (let i = 0; i < items.length; i++) {
         items[i].discount = false;
         items[i].originalPrice = items[i].price;
-        if (items[i].price > items[i].discountedPrice) {
+        if (items[i].originalPrice > items[i].discountedPrice) {
             items[i].discount = Math.round(
-                (items[i].price - items[i].discountedPrice) / items[i].price * 100
-            );
+                (items[i].price - items[i].discountedPrice) / items[i].price * 100);
             items[i].price = items[i].discountedPrice;            
             items[i].discount = items[i].discount + '%';
-
-            
         }   
     }
 
