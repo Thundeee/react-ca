@@ -19,6 +19,7 @@ export const ItemProvider = ({ children }) => {
             items[i].discount = items[i].discount + '%';
         }   
     }
+    console.log(items);
 
     return (
         <ItemContext.Provider value={{ items, isLoading, isError }}>

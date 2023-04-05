@@ -1,19 +1,22 @@
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const CheckoutSuccess = () => {
-
-
     return (
-      <div>
-          <h1>CheckoutSuccess page</h1>
-          <p>Thank you for your purchase!</p>
-          <button><Link to={`/`}>Return to Store</Link></button>
+        <div style={{ textAlign: "center", padding: "20px" }}>
+            <h1>Checkout Success</h1>
+            <p style={{ fontSize: "20px" }}>Thank you for your purchase!</p>
 
-
-
-      </div>
+            <Button
+                component={Link}
+                to={`/`}
+                variant="contained"
+                color="primary"
+            >
+                Return
+            </Button>
+        </div>
     );
-  };
-  
-  export default CheckoutSuccess;
+};
+
+export default CheckoutSuccess;

@@ -13,8 +13,6 @@ import {
 
 const Home = () => {
     const { items, isLoading, isError } = useContext(ItemContext);
-    console.log(items);
-
     return (
         <div>
             <h1>Catalogue</h1>
@@ -86,6 +84,7 @@ const Home = () => {
                                 <Button
                                     component={Link}
                                     to={`/product/${item.id}`}
+                                    variant="contained"
                                     color="primary"
                                 >
                                     View Product

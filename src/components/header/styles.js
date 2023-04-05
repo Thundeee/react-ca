@@ -5,9 +5,8 @@ export const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left:  1rem;
-  padding-right: 1rem;
-  text-align: center;
+  padding-left:  2rem;
+  padding-right: 2rem;
 
 
   h1 {
@@ -16,7 +15,7 @@ export const HeaderWrapper = styled.header`
   }
 
   a {
-    color: orange;
+    color: ${props => props.theme.palette.primary.main};
     text-decoration: none;
   }
 
@@ -39,11 +38,16 @@ export const HeaderWrapper = styled.header`
         }
       }
     }
+
+    a {
+      color:       ${props => props.theme.palette.secondary.main};
+    }
   }
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    padding: 1rem;
+    padding: 0;
+    padding-top: 1rem;
 
     h1 {
       margin-bottom: 1rem;
@@ -78,7 +82,7 @@ export const SearchList = styled.ul`
   background-color: white;
   border: 1px solid grey;
   border-radius: 5px;
-  z-index: 1;
+  z-index: 2;
 `;
 
 export const SearchListItem = styled.li`

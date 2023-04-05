@@ -34,7 +34,6 @@ const Header = () => {
 
   let cartLength = count ? count : 0;
 
-
   const handleSelection = () => {
     setSearchQuery('');
   };
