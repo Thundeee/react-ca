@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ItemContext } from "../context/itemGetter";
 import { Link } from "react-router-dom";
+import { DiscountBadge } from "../components/DiscountBadge";
 import {
     Card,
     CardContent,
@@ -38,21 +39,8 @@ const Home = () => {
                                 width: "300px",
                             }}
                         >
-                            {item.discount !== false && (
-                                <div
-                                    style={{
-                                        position: "absolute",
-                                        top: "10px",
-                                        right: "10px",
-                                        padding: "5px",
-                                        backgroundColor: "#F44336",
-                                        color: "white",
-                                        borderRadius: "5px",
-                                    }}
-                                >
-                                    {item.discount} OFF
-                                </div>
-                            )}
+                            <DiscountBadge item={item}/>
+                            
                             <CardMedia
                                 component="img"
                                 height="200"

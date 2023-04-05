@@ -4,6 +4,7 @@ import { ItemContext } from "../context/itemGetter";
 import { useSessionStorage } from "../hooks/useSessionStorage";
 import { useDispatch } from "react-redux";
 import { addItem } from "../store/cartSlice/cart";
+import { DiscountBadge } from "../components/DiscountBadge";
 import { Box, Button, Rating, Typography, Grid } from "@mui/material";
 
 const Product = () => {
@@ -46,28 +47,15 @@ const Product = () => {
             <Box sx={{ textAlign: "center" }}>
                 <h1> {CorrectItem?.title}</h1>
                 <div style={{ position: "relative", display: "inline-block" }}>
-                    {CorrectItem?.discount !== false && (
-                        <div
-                            style={{
-                                position: "absolute",
-                                top: "10px",
-                                right: "10px",
-                                padding: "5px",
-                                backgroundColor: "#F44336",
-                                color: "white",
-                                borderRadius: "5px",
-                            }}
-                        >
-                            {CorrectItem?.discount} OFF
-                        </div>
-                    )}
+                <DiscountBadge item={CorrectItem}/>
+
 
                     <img
                         src={CorrectItem?.imageUrl}
                         alt={CorrectItem?.title}
                         style={{
                             width: "100%",
-                            maxWidth: "300px",
+                            maxWidth: "250px",
                             height: "auto",
                         }}
                     />
