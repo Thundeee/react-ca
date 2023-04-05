@@ -47,8 +47,7 @@ const Product = () => {
             <Box sx={{ textAlign: "center" }}>
                 <h1> {CorrectItem?.title}</h1>
                 <div style={{ position: "relative", display: "inline-block" }}>
-                <DiscountBadge item={CorrectItem}/>
-
+                    {CorrectItem && <DiscountBadge item={CorrectItem} />}
 
                     <img
                         src={CorrectItem?.imageUrl}
@@ -102,7 +101,9 @@ const Product = () => {
             </Box>
 
             <Box sx={{ textAlign: "center", mt: 4, mb: 4 }}>
-                <Typography variant="h4">Reviews</Typography>
+                <Typography variant="h4" mb={3}>
+                    Reviews
+                </Typography>
 
                 <Grid
                     container
@@ -110,23 +111,40 @@ const Product = () => {
                     alignContent="center"
                     flexDirection="column"
                 >
-                    {CorrectItem?.reviews.map((review) => (
-                        <Grid item key={review.id}>
-                            <Box sx={{ border: "1px solid grey", p: 2 }}>
-                                <Typography variant="subtitle1">
-                                    {review.username}
-                                </Typography>
-                                <Rating
-                                    precision={0.1}
-                                    value={review.rating}
-                                    readOnly
-                                />
-                                <Typography variant="body2">
-                                    {review.description}
-                                </Typography>
-                            </Box>
+                    {CorrectItem?.reviews.length === 0 && (
+                        <Typography variant="subtitle1">
+                            No reviews yet
+                        </Typography>
+                    )}
+
+                    {CorrectItem?.reviews.length > 0 && (
+                        <Grid
+                            container
+                            spacing={2}
+                            alignContent="center"
+                            flexDirection="column"
+                        >
+                            {CorrectItem.reviews.map((review) => (
+                                <Grid item key={review.id}>
+                                    <Box
+                                        sx={{ border: "1px solid grey", p: 2 }}
+                                    >
+                                        <Typography variant="subtitle1">
+                                            {review.username}
+                                        </Typography>
+                                        <Rating
+                                            precision={0.1}
+                                            value={review.rating}
+                                            readOnly
+                                        />
+                                        <Typography variant="body2">
+                                            {review.description}
+                                        </Typography>
+                                    </Box>
+                                </Grid>
+                            ))}
                         </Grid>
-                    ))}
+                    )}
                 </Grid>
             </Box>
         </div>
