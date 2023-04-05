@@ -2,7 +2,8 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { contactSchema } from '../utils/yupSchema';
-import { FormField } from '../components/FormField';
+import { FormField } from '../components/form/FormField';
+import { Button, Typography } from '@mui/material';
 
 
 const Contact = () => {
@@ -20,7 +21,7 @@ const Contact = () => {
 
   return (
     <div>
-        <h1>Contact page</h1>
+        <h1>Contact Us!</h1>
         <form id='contactForm' onSubmit={handleSubmit(onSubmit)}>
         
         <FormField 
@@ -46,13 +47,19 @@ const Contact = () => {
 
           <FormField 
             name="body"
-            label="Body"
+            label="What is this about?"
             register={register}
             errors={errors}
-            inputProps={{type: 'textarea'}}
+            inputProps={{type: 'textarea', rows: 4}}
           />
-      <input type="submit" />
-    </form>
+      <Button variant="contained" type="submit">
+        Submit
+      </Button>   
+      <Typography variant="body2" component="p" fontWeight="light" mt={1} mb={1}> 
+        Your info is stored securely and will not be shared with anyone.
+      </Typography>
+       </form>
+
     </div>
   );
 };

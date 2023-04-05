@@ -19,6 +19,14 @@ export const HeaderWrapper = styled.header`
     text-decoration: none;
   }
 
+  a:hover {
+      text-decoration: underline;
+    }
+
+  li > a:active {
+      color: ${props => props.theme.palette.success.light};
+    }
+
   nav {
     display: flex;
     justify-content: center;

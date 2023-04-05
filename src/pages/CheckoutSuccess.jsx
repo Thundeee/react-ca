@@ -5,7 +5,7 @@ const CheckoutSuccess = () => {
     return (
         <div style={{ textAlign: "center", padding: "20px" }}>
             <h1>Checkout Success</h1>
-            <p style={{ fontSize: "20px" }}>Thank you for your purchase!</p>
+            <p style={{ fontSize: "24px" }}>Thank you for your purchase!</p>
 
             <Button
                 component={Link}
