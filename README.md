@@ -1,6 +1,7 @@
 # Quickshop
 
 Buy quick and fast!
+https://symphonious-sopapillas-91fe27.netlify.app/
 
 ## Process
 1.  Create a new CRA app. :heavy_check_mark:
@@ -31,7 +32,7 @@ Buy quick and fast!
 - 17.5 Submit button
 
 18. console.log the data from the form once validation requirements are met. :heavy_check_mark:
-19. Once your project is done, deploy it to Netlify. :x:
+19. Once your project is done, deploy it to Netlify. :heavy_check_mark:
 
 ## Available Scripts
 
