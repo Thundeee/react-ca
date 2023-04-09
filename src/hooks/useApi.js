@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const useApi = (url) => {
   const [data, setData] = useState([]);
@@ -12,11 +12,10 @@ const useApi = (url) => {
         setIsError(false);
         const fetchedData = await fetch(url);
         if (!fetchedData.ok) {
-            throw new Error(fetchedData.status);
-          }
+          throw new Error(fetchedData.status);
+        }
         const json = await fetchedData.json();
         setData(json);
-
       } catch (error) {
         console.log(error);
         setIsError(true);

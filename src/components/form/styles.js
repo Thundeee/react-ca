@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const FieldLabel = styled.label`
   font-weight: bold;
-  
+
   display: block;
   margin-bottom: 0.5rem;
 `;

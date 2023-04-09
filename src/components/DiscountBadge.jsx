@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const DiscountBadge = ({ item }) => {
   return item.discount !== false ? (
@@ -16,6 +16,6 @@ const DiscountBadge = ({ item }) => {
       {item.discount} OFF
     </div>
   ) : null;
-}
-  
-  export  {DiscountBadge};
+};
+
+export { DiscountBadge };

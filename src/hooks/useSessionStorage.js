@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState } from "react";
 const useSessionStorage = (key, initialValue) => {
   // State to store our value
   // Pass initial state function to useState so logic is only executed once
   const [storedValue, setStoredValue] = useState(() => {
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
       return initialValue;
     }
     try {
@@ -27,7 +27,7 @@ const useSessionStorage = (key, initialValue) => {
       // Save state
       setStoredValue(valueToStore);
       // Save to session storage
-      if (typeof window !== 'undefined') {
+      if (typeof window !== "undefined") {
         window.sessionStorage.setItem(key, JSON.stringify(valueToStore));
       }
     } catch (error) {
@@ -37,4 +37,4 @@ const useSessionStorage = (key, initialValue) => {
   };
   return [storedValue, setValue];
 };
-export {useSessionStorage};
+export { useSessionStorage };

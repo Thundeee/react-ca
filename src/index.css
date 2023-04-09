@@ -1,19 +1,17 @@
 body {
-    margin: 0;
-    
+  margin: 0;
 }
 
 main {
-    min-height: 85vh;
+  min-height: 85vh;
 }
 
-
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -1,59 +1,61 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import useSearch from '../../hooks/useSearch';
-import { useContext } from 'react';
-import { ItemContext } from '../../context/itemGetter';
-import { useSelector } from 'react-redux';
-import { Badge, IconButton } from '@mui/material';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import useSearch from "../../hooks/useSearch";
+import { useContext } from "react";
+import { ItemContext } from "../../context/itemGetter";
+import { useSelector } from "react-redux";
+import { Badge, IconButton } from "@mui/material";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import {
   HeaderWrapper,
   SearchWrapper,
   SearchInput,
   SearchList,
   SearchListItem,
-} from './styles';
+} from "./styles";
 
-import { useTheme } from '@mui/material/styles';
-
-
+import { useTheme } from "@mui/material/styles";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const Header = () => {
   const theme = useTheme();
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [searchItems] = useSearch(searchQuery);
 
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
-  };  
+  };
 
   const { isLoading, isError } = useContext(ItemContext);
-  
+
   const count = useSelector((state) => state.cartHandling.quantity);
   console.log(count);
 
   let cartLength = count ? count : 0;
 
   const handleSelection = () => {
-    setSearchQuery('');
+    setSearchQuery("");
   };
 
   return (
     <HeaderWrapper theme={theme}>
-      <Link to={'/'}> <h1>QuickShop</h1></Link>
+      <Link to={"/"}>
+        {" "}
+        <h1>QuickShop</h1>
+      </Link>
 
       <SearchWrapper>
         <SearchInput
-          type='text'
-          placeholder='Search...'
+          type="text"
+          placeholder="Search..."
           value={searchQuery}
           onChange={handleSearchInputChange}
         />
 
         {searchQuery && (
           <SearchList>
-            {isLoading && <div>Loading...</div>}
-            {isError && <div>Error...</div>}
+            {isLoading && <CircularProgress />}
+            {isError && <div>An error occured please try again</div>}
             {searchItems &&
               searchItems.map((item) => (
                 <SearchListItem key={item.id} onClick={handleSelection}>
@@ -67,16 +69,16 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link to='/'>Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to='/contact'>Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <Badge badgeContent={cartLength} color='secondary'>
+            <Badge badgeContent={cartLength} color="secondary">
               <IconButton>
-                <Link to='/checkout'>
-                  <ShoppingCartIcon fontSize='large' />
+                <Link to="/checkout">
+                  <ShoppingCartIcon fontSize="large" />
                 </Link>
               </IconButton>
             </Badge>
@@ -86,5 +88,5 @@ const Header = () => {
     </HeaderWrapper>
   );
 };
-  
+
 export default Header;

@@ -1,13 +1,12 @@
-import { useContext } from 'react';
-import { ItemContext } from '../context/itemGetter';
+import { useContext } from "react";
+import { ItemContext } from "../context/itemGetter";
 
 const useSearch = (query) => {
   const { items } = useContext(ItemContext);
-  if (query === '') {
+  if (query === "") {
     return [[]];
-    
   }
-  
+
   const searchItems = () => {
     return items.filter((item) => {
       return item.title.toLowerCase().includes(query.toLowerCase());
@@ -15,8 +14,8 @@ const useSearch = (query) => {
   };
 
   if (searchItems().length === 0) {
-    console.log("No items found")
-       return [[ {title: "No results found", id: "../"} ]]; 
+    console.log("No items found");
+    return [[{ title: "No results found", id: "../" }]];
   }
   console.log("searchItems: ", searchItems());
   return [searchItems()];

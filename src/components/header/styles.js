@@ -1,13 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
-  background-color: ${props => props.theme.palette.primary.main};
+  background-color: ${(props) => props.theme.palette.primary.main};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left:  2rem;
+  padding-left: 2rem;
   padding-right: 2rem;
-
 
   h1 {
     margin: 0;
@@ -15,17 +14,17 @@ export const HeaderWrapper = styled.header`
   }
 
   a {
-    color: ${props => props.theme.palette.primary.main};
+    color: ${(props) => props.theme.palette.primary.main};
     text-decoration: none;
   }
 
   a:hover {
-      text-decoration: underline;
-    }
+    text-decoration: underline;
+  }
 
   li > a:active {
-      color: ${props => props.theme.palette.success.light};
-    }
+    color: ${(props) => props.theme.palette.success.light};
+  }
 
   nav {
     display: flex;
@@ -48,7 +47,7 @@ export const HeaderWrapper = styled.header`
     }
 
     a {
-      color:       ${props => props.theme.palette.secondary.main};
+      color: ${(props) => props.theme.palette.secondary.main};
     }
   }
 
@@ -61,7 +60,7 @@ export const HeaderWrapper = styled.header`
       margin-bottom: 1rem;
     }
 
-     ul {
+    ul {
       padding: 0;
     }
   }
@@ -96,7 +95,6 @@ export const SearchList = styled.ul`
 export const SearchListItem = styled.li`
   padding: 0.5rem;
   border-bottom: 1px solid grey;
-
 
   &:last-child {
     border-bottom: none;
