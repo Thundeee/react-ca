@@ -134,6 +134,7 @@ const Checkout = () => {
             to={`/CheckoutSuccess`}
             variant="contained"
             color="success"
+            onClick={exiter}
           >
             Checkout!
           </Button>
