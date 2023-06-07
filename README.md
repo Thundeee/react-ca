@@ -1,38 +1,41 @@
-# Quickshop
+## Quickshop
 
-Buy quick and fast!
-https://symphonious-sopapillas-91fe27.netlify.app/
+QuickShop was a school assignment that was my first react project. It is a store that sells all kinds of products! Since I named the site "Quickshop" I focused on making the site fast and easy to navigate.
 
-## Process
-1.  Create a new CRA app. :heavy_check_mark:
-2. Create a Header that has a Nav. :heavy_check_mark:
-3. Create a Cart Icon component and position this next to your Nav. This Cart Icon component will have an overlay that displays the number of items in the cart. :heavy_check_mark:
-4. Create a Footer component. :heavy_check_mark:
-5. Create a Layout component that has your Header and Footer. :heavy_check_mark:
-6. Create the other pages: :heavy_check_mark:
-- 6.1 ContactPage
-- 6.2 ProductPage
-- 6.3 CheckoutPage
-- 6.4 CheckoutSuccessPage
-7. Add React Router and route to each of the pages. The ProductPage page will be using a dynamic segment. :heavy_check_mark:
-8. Fetch the list of products on the Homepage and store this as a state. :heavy_check_mark:
-9. On the homepage, loop through the products and display a Product component for each of the values. This Product component should look like a product card. Each Product component will have a View product button which will link to the ProductPage page. :heavy_check_mark:
-10. The homepage should have a lookahead/auto-complete Search bar component. Typing values in the search bar should display products where the title matches the search input. Clicking on an item should take the user to the ProductPage page. Tip: Filter the user input and then display products that match the input. :heavy_check_mark:
-11. On the ProductPage, use the ID of the product as the params for the dynamic segment. Add the product details as mentioned in the brief. :heavy_check_mark:
-12. Create a cart state. When the Add to cart button on the ProductPage is clicked, add the product to the cart. :heavy_check_mark:
-13. Clicking on the Cart Icon component will take the user to the CheckoutPage page. :heavy_check_mark:
-14. The CheckoutPage must list all of the products in the cart, show a total at the bottom and a Checkout button. :heavy_check_mark:
-15. Clicking the Checkout button will take the user to the CheckoutSuccessPage. :heavy_check_mark:
-16. The CheckoutSuccessPage should display that the order was successful and clear the cart. There should be a link to go back to the store. :heavy_check_mark:
-17. On the ContactPage, create the following inputs with the following requirements. :heavy_check_mark:
-- 17.1 Full name (Minimum number of characters is 3, required)
-- 17.2 Subject (Minimum number of characters is 3, required)
-- 17.3 Email (Must be a valid email address, required)
-- 17.4 Body (Minimum number of characters is 3, required)
-- 17.5 Submit button
+## Description
 
-18. console.log the data from the form once validation requirements are met. :heavy_check_mark:
-19. Once your project is done, deploy it to Netlify. :heavy_check_mark:
+Add a more detailed description of what your project entails and set out to do.
+
+You can add some bullet points if you'd like to:
+
+- List item 1
+- List item 2
+- List item 3
+
+## Built With
+
+You can list a the tech stack that you've used over here
+
+- [React.js](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com)
+
+## Getting Started
+
+### Installing
+
+This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
+
+1. Clone the repo:
+
+```bash
+git clone git@github.com:NoroffFEU/portfolio-1-example.git
+```
+
+2. Install the dependencies:
+
+```
+npm install
+```
 
 ## Available Scripts
 
@@ -65,3 +68,24 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+
+## Contributing
+
+Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+
+## Contact
+
+This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+
+[My Twitter page](www.twitter.com)
+
+[My LinkedIn page](www.linkedin.com)
+
+## License
+
+You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
+
+## Acknowledgments
+
+This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
