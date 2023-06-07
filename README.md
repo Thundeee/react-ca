@@ -14,30 +14,44 @@ You can add some bullet points if you'd like to:
 
 ## Built With
 
-You can list a the tech stack that you've used over here
 
 - [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+- [React Router](https://reactrouter.com/)
+- [React Redux](https://react-redux.js.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [React hook form](https://react-hook-form.com/)
+- [Yup](https://www.npmjs.com/package/yup)
+- [Material UI](https://material-ui.com/)
+- [Styled Components](https://styled-components.com/)
+
+
+
 
 ## Getting Started
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
 
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git clone git@github.com:Thundeee/react-ca.git
 ```
 
-2. Install the dependencies:
+2. Install node.js if you haven't already:
 
 ```
-npm install
+https://nodejs.org/en/download/
 ```
 
-## Available Scripts
+3. Navigate to the project folder in your terminal and run the following command to install the dependencies:
+
+```bash
+npm i
+```
+
+
+## Running the project
 
 In the project directory, you can run:
 
@@ -72,20 +86,21 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Contributing
 
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+If you are looking to contribute to this project, you can follow these steps to get started:
+
+1. Fork the Project
+2. Create your new Branch
+3. Commit and push your Changes
+4. Open a Pull Request to the `dev` branch
+5. Leave a comment on the pull request to explain what you've added/changed
+6. I will review the changes and merge them in if they look good!
+7. Thank you for your contribution!
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+The easiest way to get in touch with me is through Discord or Twitter. I am also available on LinkedIn if you'd like to connect!
 
-[My Twitter page](www.twitter.com)
 
-[My LinkedIn page](www.linkedin.com)
-
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
-
-## Acknowledgments
-
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+<a href="https://twitter.com/potetsalatlol" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="potetsalatlol" height="40" width="40" /></a>
+<a href="https://discord.com/users/183978195551387649" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="Asbjorn#6086" height="40" width="40" /></a>
+<a href="https://linkedin.com/in/asbjørn-abelsen-sekse-346961241" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="asbjørn-abelsen-sekse-346961241" height="40" width="40" /></a>
