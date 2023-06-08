@@ -2,6 +2,8 @@
 
 QuickShop was a school assignment that was my first react project. It is a store that sells all kinds of products! Since I named the site "Quickshop" I focused on making the site fast and easy to navigate.
 
+https://symphonious-sopapillas-91fe27.netlify.app/
+
 ## Description
 
 Quickshop is built with React and as mentioned was my first React project. For the assignement we were given an api with items that the website would sell. I noticed that I only have to ever do a single api call each session for this api since the api call for a single product had the same information as when I did an api call for all the products. Because of this I stored the items in a Context inside the Header so I would always have all the data I needed.
