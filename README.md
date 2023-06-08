@@ -4,13 +4,13 @@ QuickShop was a school assignment that was my first react project. It is a store
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+Quickshop is built with React and as mentioned was my first React project. For the assignement we were given an api with items that the website would sell. I noticed that I only have to ever do a single api call each session for this api since the api call for a single product had the same information as when I did an api call for all the products. Because of this I stored the items in a Context inside the Header so I would always have all the data I needed.
 
-You can add some bullet points if you'd like to:
+The contact form is built with React Hook Form and Yup for validation. I discovered in this assignment that Yup makes form validation really easy and I love using it. 
 
-- List item 1
-- List item 2
-- List item 3
+This was also my first time trying to set a theme for a website using Material UI. On this assignement I went pretty basic with the theme but this was the project that I learned all the basics of Material UI and I have used it in every React project since.
+
+
 
 ## Built With
 
@@ -101,6 +101,4 @@ If you are looking to contribute to this project, you can follow these steps to 
 The easiest way to get in touch with me is through Discord or Twitter. I am also available on LinkedIn if you'd like to connect!
 
 
-<a href="https://twitter.com/potetsalatlol" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="potetsalatlol" height="40" width="40" /></a>
-<a href="https://discord.com/users/183978195551387649" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="Asbjorn#6086" height="40" width="40" /></a>
-<a href="https://linkedin.com/in/asbjørn-abelsen-sekse-346961241" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="asbjørn-abelsen-sekse-346961241" height="40" width="40" /></a>
+<a href="https://twitter.com/potetsalatlol" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="potetsalatlol" height="40" width="40" /></a><a href="https://discord.com/users/183978195551387649" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="Asbjorn#6086" height="40" width="40" /></a><a href="https://linkedin.com/in/asbjørn-abelsen-sekse-346961241" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="asbjørn-abelsen-sekse-346961241" height="40" width="40" /></a>
