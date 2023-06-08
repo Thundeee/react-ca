@@ -1,40 +1,57 @@
-# Quickshop
+## Quickshop
 
-Buy quick and fast!
-https://symphonious-sopapillas-91fe27.netlify.app/
+QuickShop was a school assignment that was my first react project. It is a store that sells all kinds of products! Since I named the site "Quickshop" I focused on making the site fast and easy to navigate.
 
-## Process
-1.  Create a new CRA app. :heavy_check_mark:
-2. Create a Header that has a Nav. :heavy_check_mark:
-3. Create a Cart Icon component and position this next to your Nav. This Cart Icon component will have an overlay that displays the number of items in the cart. :heavy_check_mark:
-4. Create a Footer component. :heavy_check_mark:
-5. Create a Layout component that has your Header and Footer. :heavy_check_mark:
-6. Create the other pages: :heavy_check_mark:
-- 6.1 ContactPage
-- 6.2 ProductPage
-- 6.3 CheckoutPage
-- 6.4 CheckoutSuccessPage
-7. Add React Router and route to each of the pages. The ProductPage page will be using a dynamic segment. :heavy_check_mark:
-8. Fetch the list of products on the Homepage and store this as a state. :heavy_check_mark:
-9. On the homepage, loop through the products and display a Product component for each of the values. This Product component should look like a product card. Each Product component will have a View product button which will link to the ProductPage page. :heavy_check_mark:
-10. The homepage should have a lookahead/auto-complete Search bar component. Typing values in the search bar should display products where the title matches the search input. Clicking on an item should take the user to the ProductPage page. Tip: Filter the user input and then display products that match the input. :heavy_check_mark:
-11. On the ProductPage, use the ID of the product as the params for the dynamic segment. Add the product details as mentioned in the brief. :heavy_check_mark:
-12. Create a cart state. When the Add to cart button on the ProductPage is clicked, add the product to the cart. :heavy_check_mark:
-13. Clicking on the Cart Icon component will take the user to the CheckoutPage page. :heavy_check_mark:
-14. The CheckoutPage must list all of the products in the cart, show a total at the bottom and a Checkout button. :heavy_check_mark:
-15. Clicking the Checkout button will take the user to the CheckoutSuccessPage. :heavy_check_mark:
-16. The CheckoutSuccessPage should display that the order was successful and clear the cart. There should be a link to go back to the store. :heavy_check_mark:
-17. On the ContactPage, create the following inputs with the following requirements. :heavy_check_mark:
-- 17.1 Full name (Minimum number of characters is 3, required)
-- 17.2 Subject (Minimum number of characters is 3, required)
-- 17.3 Email (Must be a valid email address, required)
-- 17.4 Body (Minimum number of characters is 3, required)
-- 17.5 Submit button
+## Description
 
-18. console.log the data from the form once validation requirements are met. :heavy_check_mark:
-19. Once your project is done, deploy it to Netlify. :heavy_check_mark:
+Quickshop is built with React and as mentioned was my first React project. For the assignement we were given an api with items that the website would sell. I noticed that I only have to ever do a single api call each session for this api since the api call for a single product had the same information as when I did an api call for all the products. Because of this I stored the items in a Context inside the Header so I would always have all the data I needed.
 
-## Available Scripts
+The contact form is built with React Hook Form and Yup for validation. I discovered in this assignment that Yup makes form validation really easy and I love using it. 
+
+This was also my first time trying to set a theme for a website using Material UI. On this assignement I went pretty basic with the theme but this was the project that I learned all the basics of Material UI and I have used it in every React project since.
+
+
+
+## Built With
+
+
+- [React.js](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
+- [React Redux](https://react-redux.js.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [React hook form](https://react-hook-form.com/)
+- [Yup](https://www.npmjs.com/package/yup)
+- [Material UI](https://material-ui.com/)
+- [Styled Components](https://styled-components.com/)
+
+
+
+
+## Getting Started
+
+### Installing
+
+
+1. Clone the repo:
+
+```bash
+git clone git@github.com:Thundeee/react-ca.git
+```
+
+2. Install node.js if you haven't already:
+
+```
+https://nodejs.org/en/download/
+```
+
+3. Navigate to the project folder in your terminal and run the following command to install the dependencies:
+
+```bash
+npm i
+```
+
+
+## Running the project
 
 In the project directory, you can run:
 
@@ -65,3 +82,23 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+
+## Contributing
+
+If you are looking to contribute to this project, you can follow these steps to get started:
+
+1. Fork the Project
+2. Create your new Branch
+3. Commit and push your Changes
+4. Open a Pull Request to the `dev` branch
+5. Leave a comment on the pull request to explain what you've added/changed
+6. I will review the changes and merge them in if they look good!
+7. Thank you for your contribution!
+
+## Contact
+
+The easiest way to get in touch with me is through Discord or Twitter. I am also available on LinkedIn if you'd like to connect!
+
+
+<a href="https://twitter.com/potetsalatlol" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="potetsalatlol" height="40" width="40" /></a><a href="https://discord.com/users/183978195551387649" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="Asbjorn#6086" height="40" width="40" /></a><a href="https://linkedin.com/in/asbjørn-abelsen-sekse-346961241" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="asbjørn-abelsen-sekse-346961241" height="40" width="40" /></a>
